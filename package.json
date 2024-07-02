@@ -1,0 +1,16 @@
+{
+  "name": "type-value-checker",
+  "version": "1.0.0",
+  "description": "A plain-JS type checker",
+  "main": "check.js",
+  "type": "module",
+  "scripts": {
+    "test": "./check.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ericfortis/type-value-checker.git"
+  },
+  "author": "Eric Fortis",
+  "license": "MIT"
+}
