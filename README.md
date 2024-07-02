@@ -5,28 +5,30 @@ A plain-JS type checker with an API similar to:
 - [React’s prop-types](https://github.com/facebook/prop-types)
 - [rho-contracts](https://github.com/rho-contracts/rho-contracts)
 
-## TL;DR
-```js
-import { check } from 'type-value-checker'
-
-const t_num = n => check(n, Number)
-
-function square(n) {
-  t_num(n)
-  return t_num(n * n)
-}
-```
 
 ## Single type definition
 ```js
+import { check } from 'type-value-checker'
+
 check([], Array)
 check('a', String)
 check(100, Number)
 check(new Int8Array([1, 2, 3]), Int8Array)
 ```
 
+The value is returned, as well:
+```js
+const t_num = n => check(n, Number)
+function square(n) {
+  t_num(n)
+  return t_num(n * n)
+}
+```
+
 ## Multiple type definitions
 ```js
+import { check, Where, Optional, OptionalWhere, Shape } from 'type-value-checker'
+
 function Person(p) {
   check(p, {
     name: String,
