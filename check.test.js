@@ -1,10 +1,5 @@
 #!/usr/bin/env node
 
-/**
- * Copyright (c) Uxtely LLC. All rights reserved. Licensed under the ISC
- * license found in the LICENSE file in the root directory of this source tree.
- */
-
 import { describe, test } from 'node:test'
 import { throws, doesNotThrow, equal, deepEqual } from 'node:assert/strict'
 import { check, Shape, Where, Optional, OptionalWhere } from './check.js'

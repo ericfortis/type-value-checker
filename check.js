@@ -1,8 +1,3 @@
-/**
- * Copyright (c) Uxtely LLC. All rights reserved. Licensed under the ISC
- * license found in the LICENSE file in the root directory of this source tree.
- */
-
 const typeOf = example => Object.prototype.toString.call(example)
 const isTypeOf = example => value => typeOf(value) === typeOf(example)
 
